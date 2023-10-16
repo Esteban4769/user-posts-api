@@ -21,7 +21,7 @@ export function send({ email, subject, html }) {
 }
 
 export function sendActivationLink(email, token) {
-  const link = `${process.env.CLIENT_URL}/#/activate/${token}`;
+  const link = `${process.env.CLIENT_URL}list-of-posts-tt/#/activate/${token}`;
 
   return send({
     email,
