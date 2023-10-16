@@ -7,4 +7,7 @@ export const sequelize = new Sequelize({
   username: process.env.POSTGRES_USER,
   password: process.env.POSTGRES_PASSWORD,
   logging: false,
+  dialectOptions: {
+    ssl: true
+  }
 });
