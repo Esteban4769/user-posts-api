@@ -8,9 +8,9 @@ To set up and run the server, follow these steps:
 
 1. Clone the repository:
 
-bash
-Copy code
+```sh
 git clone https://github.com/yourusername/user-post-api.git
+```
 
 
 2. Change to the project directory:
@@ -39,7 +39,7 @@ Replace http://your-client-url.com with the actual URL of your client applicatio
 
 ```sh
 npm start
-```sh
+```
 
 The server will start on the specified port or default to port 5000 if not provided.
 
