@@ -8,4 +8,18 @@ async function getAll(req, res, next) {
   );
 }
 
-export const userController = { getAll };
+async function getUserById(req, res) {
+  const { id } = req.params;
+
+  console.log(id);
+
+  try {
+    const user = await userService.getById(id);
+  
+    res.status(200).json(user);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to retrieve user post' });
+  }
+};
+
+export const userController = { getAll, getUserById };

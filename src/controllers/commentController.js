@@ -23,7 +23,21 @@ const getCommentsByPost = async (req, res) => {
   }
 };
 
+const deleteComment = async(req, res) => {
+  const commentId = req.params.id;
+
+  commentService.remove(commentId)
+    .then(() => {
+      res.status(204).send();
+    })
+    .catch((error) => {
+      res.status(500).json({ error: 'Failed to delete the comment' });
+    });
+}
+
+
 export const commentController = {
   createComment,
   getCommentsByPost,
+  deleteComment,
 };

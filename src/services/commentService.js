@@ -10,8 +10,17 @@ const findByPost = (postId) => {
   });
 };
 
+const remove = (commentId) => {
+  return Comment.destroy({
+    where: {
+       id: commentId,
+    }
+  })
+};
+
 
 export const commentService = {
   create,
   findByPost,
+  remove
 };
